@@ -8,7 +8,7 @@ Boolean isLoggedIn = session.getAttribute("isLogin") != null ? (Boolean) session
 <link rel='stylesheet' type='text/css'
 	href='<%=request.getContextPath()%>/css/header.css' />
 <header class='ja2pyc_header'>
-	<div class='header_title'>Header Title</div>
+	<div class='header_title'><a href='<%=request.getContextPath() %>'>Header Title</a></div>
 	<div class='header_nav'>
 		<ul>
 			<%
