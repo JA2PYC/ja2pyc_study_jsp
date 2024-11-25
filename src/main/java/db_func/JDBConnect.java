@@ -3,6 +3,7 @@ package db_func;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.Statement;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
@@ -10,6 +11,7 @@ import javax.sql.DataSource;
 
 public class JDBConnect {
 	public Connection con;
+	public Statement stmt;
 	public PreparedStatement psmt;
 	public ResultSet rs;
 
@@ -36,6 +38,8 @@ public class JDBConnect {
 				psmt.close();
 			if (con != null)
 				con.close();
+			if (stmt != null)
+				stmt.close();
 		} catch (Exception e) {
 			System.out.println("Exception : Close JDBC");
 			e.printStackTrace();

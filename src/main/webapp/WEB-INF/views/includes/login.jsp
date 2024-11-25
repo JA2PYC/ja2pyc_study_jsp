@@ -1,13 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ include file='/includes/isLoggedIn.jsp'%>
+<%@ include file='/WEB-INF/views/includes/isLoggedIn.jsp'%>
 <%
 String errorMsg = request.getAttribute("loginError") != null ? request.getAttribute("loginError").toString() : "";
 %>
 <link rel='stylesheet' type='text/css'
 	href='<%=request.getContextPath()%>/css/login.css' />
 <div><%=errorMsg%></div>
-<form action='<%=request.getContextPath()%>/includes/loginProcess.jsp'
+<form action='<%=request.getContextPath()%>/loginProcess'
 	method='post'>
 	<table class='login'>
 		<thead>
@@ -31,7 +31,7 @@ String errorMsg = request.getAttribute("loginError") != null ? request.getAttrib
 			</tr>
 			<tr>
 				<td colspan='2'><a
-					href='<%=request.getContextPath()%>/includes/boardList.jsp'>게시판</a></td>
+					href='<%=request.getContextPath()%>/board'>게시판</a></td>
 			</tr>
 		</tbody>
 	</table>

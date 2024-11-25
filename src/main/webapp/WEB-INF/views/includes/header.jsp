@@ -15,13 +15,13 @@ Boolean isLoggedIn = session.getAttribute("isLogin") != null ? (Boolean) session
 			if (isLoggedIn == false) {
 			%>
 			<li><a
-				href='<%=request.getContextPath()%>/includes/register.jsp'>회원가입</a></li>
-			<li><a href='<%=request.getContextPath()%>/includes/login.jsp'>로그인</a></li>
+				href='<%=request.getContextPath()%>/register'>회원가입</a></li>
+			<li><a href='<%=request.getContextPath()%>/login'>로그인</a></li>
 			<%
 			} else {
 			%>
 			<li><%=session.getAttribute("UserName") != null ? session.getAttribute("UserName") : ""%></li>
-			<li><a href='<%=request.getContextPath()%>/includes/logout.jsp'>로그아웃</a></li>
+			<li><a href='<%=request.getContextPath()%>/logout'>로그아웃</a></li>
 			<%
 			}
 			%>
