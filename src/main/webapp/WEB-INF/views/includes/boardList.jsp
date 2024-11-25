@@ -57,8 +57,7 @@ if (request.getAttribute("searchResult") != null) {
 		<tr>
 			<td colspan='5'>
 				<div>
-					<form action="<%=request.getContextPath()%>/includes/search.jsp"
-						method='get'>
+					<form action="search" method='get'>
 						<label for='search_type'>검색</label> <select name="search_type"
 							id='search_type'>
 							<option value='title'>제 목</option>
@@ -69,7 +68,7 @@ if (request.getAttribute("searchResult") != null) {
 				</div>
 				<div>
 					<button type='button'
-						onclick='location.href="<%=request.getContextPath()%>/includes/write.jsp"'>글쓰기</button>
+						onclick='location.href="<%=request.getContextPath()%>/write"'>글쓰기</button>
 				</div>
 			</td>
 		</tr>

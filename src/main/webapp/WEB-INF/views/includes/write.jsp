@@ -3,7 +3,7 @@
 <%
 Boolean isLoggedIn = (Boolean) session.getAttribute("isLogin");
 if (isLoggedIn == null || isLoggedIn != true) {
-	response.sendRedirect(request.getContextPath() + "/index.jsp");
+	response.sendRedirect(request.getContextPath() + "/login");
 	return;
 }
 
@@ -13,7 +13,7 @@ String userId = session.getAttribute("UserId").toString();
 	href='<%=request.getContextPath()%>/css/write.css' />
 	<div>userId : <%=userId %></div>
 <form
-	action="<%=request.getContextPath()%>/includes/writeProcess.jsp"
+	action="<%=request.getContextPath()%>/writeProcess"
 	method='post'>
 	<table>
 		<thead>

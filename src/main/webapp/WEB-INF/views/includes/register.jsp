@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ include file='/includes/isLoggedIn.jsp'%>
+<%@ include file='/WEB-INF/views/includes/isLoggedIn.jsp'%>
 <%
 String errorMsg = request.getAttribute("registError") != null ? request.getAttribute("registError").toString() : "";
 %>
@@ -15,8 +15,7 @@ String errorMsg = request.getAttribute("registError") != null ? request.getAttri
 <body>
 	<main>
 		<div class='errorMsg'><%=errorMsg%></div>
-		<form
-			action="<%=request.getContextPath()%>/includes/registerProcess.jsp"
+		<form action="<%=request.getContextPath()%>/registerProcess"
 			method='post'>
 			<table>
 				<thead>
